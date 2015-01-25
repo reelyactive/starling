@@ -41,7 +41,7 @@ Options
 The following options are supported when instantiating starling (those shown are the defaults):
 
     {
-      httpPort: 3002
+      httpPort: 3003
     }
 
 
