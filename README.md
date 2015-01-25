@@ -2,10 +2,10 @@ starling
 ========
 
 
-An emulator to feed barnowl and barnacles
------------------------------------------
+An emulator of wireless device transmissions in the IoT
+-------------------------------------------------------
 
-Starlings imitate a variety of avian species and have a repertoire of about 15–20 distinct imitations. They also imitate a few sounds other than those of wild birds.
+starling provides a friendly interface to emulate wireless device transmissions as they are consumed by [barnacles](https://www.npmjs.com/package/barnacles) (and soon [barnowl](https://www.npmjs.com/package/barnowl) too).  Why the name?  As [Wikipedia explains](http://en.wikipedia.org/wiki/Starling#Mimicry), "Starlings imitate a variety of avian species and have a repertoire of about 15–20 distinct imitations."  Not only are they natural emulators, they're also occasional food for Barn Owls.  Well how about that as a coincidence.
 
 
 Installation
@@ -21,6 +21,28 @@ Hello starling
 var starling = require('starling');
 var emulator = new starling();
 ```
+
+Then browse to [http://localhost:3003](http://localhost:3003) to see the landing page.
+
+
+starling and barnacles
+----------------------
+
+starling can replace [barnowl](https://www.npmjs.com/package/barnowl) as a source of visibilityEvents for [barnacles](https://www.npmjs.com/package/barnacles).  Simply bind barnacles to the instance of starling as follows:
+
+```javascript
+notifications.bind({ barnowl: emulator });
+```
+
+
+Options
+-------
+
+The following options are supported when instantiating starling (those shown are the defaults):
+
+    {
+      httpPort: 3002
+    }
 
 
 What's next?
