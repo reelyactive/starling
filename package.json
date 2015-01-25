@@ -2,13 +2,13 @@
   "name": "starling",
   "homepage": "https://github.com/reelyactive/starling/",
   "author": "reelyActive <webdev@reelyactive.com>",
-  "description": "Emulator to feed barnowl and barnacles.  We believe in an open Internet of Things.",
+  "description": "Emulator of wireless device transmissions in the IoT.  We believe in an open Internet of Things.",
   "keywords": [
     "reelyActive",
     "emulator",
     "IoT"
   ],
-  "version": "0.0.0",
+  "version": "0.0.1",
   "engines": {
     "node": "^0.10.0"
   },
@@ -21,7 +21,8 @@
     "url": "https://github.com/reelyactive/starling.git"
   },
   "dependencies": {
-    "express": ">=4.0.0"
+    "express": ">=4.0.0",
+    "body-parser": ">=1.8.0"
   },
   "devDependencies": {},
   "bugs": {
