@@ -22,7 +22,7 @@ var starling = require('starling');
 var emulator = new starling();
 ```
 
-Then browse to [http://localhost:3003](http://localhost:3003) to see the landing page.
+Then browse to [http://localhost:3003](http://localhost:3003) to see the landing page which provides two means of emulation.
 
 
 starling and barnacles
