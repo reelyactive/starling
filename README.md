@@ -5,7 +5,20 @@ starling
 An emulator of wireless device transmissions in the IoT
 -------------------------------------------------------
 
-starling provides a friendly interface to emulate wireless device transmissions as they are consumed by [barnacles](https://www.npmjs.com/package/barnacles) (and soon [barnowl](https://www.npmjs.com/package/barnowl) too).  Why the name?  As [Wikipedia explains](http://en.wikipedia.org/wiki/Starling#Mimicry), "Starlings imitate a variety of avian species and have a repertoire of about 15–20 distinct imitations."  Not only are they natural emulators, they're also occasional food for Barn Owls.  Well how about that as a coincidence.
+starling is an emulator of decoded wireless device transmissions.  It provides a friendly web interface for preparing and running an emulation sequence in order to validate a scenario or to test our software stack.
+
+__In the scheme of Things (pun intended)__
+
+starling emulates decoded wireless device transmissions as they are consumed by [barnacles](https://www.npmjs.com/package/barnacles) (and soon [barnowl](https://www.npmjs.com/package/barnowl) too).  starling may be used in place of reelyActive hardware.  Check out our [developer page](http://reelyactive.github.io/) for more resources on reelyActive software and hardware.
+
+
+![starling logo](http://reelyactive.com/images/starling.jpg)
+
+
+What's in a name?
+-----------------
+
+As [Wikipedia explains](http://en.wikipedia.org/wiki/Starling#Mimicry), "Starlings imitate a variety of avian species and have a repertoire of about 15–20 distinct imitations."  Not only are they natural emulators, they're also occasional food for Barn Owls.  Well how about that for a coincidence.
 
 
 Installation
