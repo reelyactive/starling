@@ -18,7 +18,9 @@ starling emulates decoded wireless device transmissions as they are consumed by 
 What's in a name?
 -----------------
 
-As [Wikipedia explains](http://en.wikipedia.org/wiki/Starling#Mimicry), "Starlings imitate a variety of avian species and have a repertoire of about 15–20 distinct imitations."  Not only are they natural emulators, they're also occasional food for Barn Owls.  Well how about that for a coincidence.
+As [Wikipedia explains](http://en.wikipedia.org/wiki/Starling#Mimicry), "Starlings imitate a variety of avian species and have a repertoire of about 15–20 distinct imitations."  Actually, they can mimic plenty besides other avian species.  There are some great videos of starlings mimicking telephones, classical music and more.  "Calls that are simple in frequency structure and calls that show little amplitude modulation are preferentially imitated".  That's fitting given that the wireless devices currently supported by reelyActive hardware all communicate using [Frequency-Shift Keying (FSK)](http://en.wikipedia.org/wiki/Frequency-shift_keying) which involves no amplitude modulation.
+
+Not only are starlings natural emulators, they're also occasional food for Barn Owls.  Well how about that for a coincidence.
 
 
 Installation
