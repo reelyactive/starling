@@ -8,7 +8,7 @@
     <div id="content">
       <img src="images/logo.png">
       <p> Emulate a single wireless transmission: </p>
-      <form action="sequence" method="post" enctype='application/json'>
+      <form action="sequences" method="post" enctype='application/json'>
         Transmitter ID:
         <input type="text" name="transmitterID" size="16" value="001bc50940100000"> &nbsp;
         Receiver ID:
@@ -17,7 +17,7 @@
       </form>
       <br><br>
       <p> Or input a sequence as JSON: </p>
-      <form action="sequence" method="post" enctype='application/json'>
+      <form action="sequences" method="post" enctype='application/json'>
         <textarea name="sequence" rows=12 cols=60>
 {
   "locations": [
@@ -47,7 +47,5 @@
         <input type="submit" name="action" value="Run sequence">
       </form>
     </div>
-    <!--<script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>-->
   </body>
 </html>
