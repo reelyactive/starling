@@ -5,7 +5,7 @@ starling
 Emulator of wireless device transmissions in the IoT
 ----------------------------------------------------
 
-__starling__ is an emulator of decoded wireless device transmissions.
+__starling__ is an emulator of decoded wireless device transmissions, providing a stream of [raddec](https://github.com/reelyactive/raddec) objects.
 
 
 Installation
