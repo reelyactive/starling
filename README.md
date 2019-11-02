@@ -2,25 +2,10 @@ starling
 ========
 
 
-An emulator of wireless device transmissions in the IoT
--------------------------------------------------------
+Emulator of wireless device transmissions in the IoT
+----------------------------------------------------
 
-starling is an emulator of decoded wireless device transmissions.  It provides a friendly web interface for preparing and running an emulation sequence in order to validate a scenario or to test our software stack.
-
-__In the scheme of Things (pun intended)__
-
-starling emulates decoded wireless device transmissions as they are consumed by [barnacles](https://www.npmjs.com/package/barnacles) (and soon [barnowl](https://www.npmjs.com/package/barnowl) too).  starling may be used in place of reelyActive hardware.  Check out our [developer page](http://reelyactive.github.io/) for more resources on reelyActive software and hardware.
-
-
-![starling logo](http://reelyactive.com/images/starling.jpg)
-
-
-What's in a name?
------------------
-
-As [Wikipedia explains](http://en.wikipedia.org/wiki/Starling#Mimicry), "Starlings imitate a variety of avian species and have a repertoire of about 15–20 distinct imitations."  Actually, they can mimic plenty besides other avian species.  There are some great videos of starlings mimicking telephones, classical music and more.  "Calls that are simple in frequency structure and calls that show little amplitude modulation are preferentially imitated".  That's fitting given that the wireless devices currently supported by reelyActive hardware all communicate using [Frequency-Shift Keying (FSK)](http://en.wikipedia.org/wiki/Frequency-shift_keying) which involves no amplitude modulation.
-
-Not only are starlings natural emulators, they're also occasional food for Barn Owls.  Well how about that for a coincidence.
+__starling__ is an emulator of decoded wireless device transmissions, providing a stream of [raddec](https://github.com/reelyactive/raddec) objects.
 
 
 Installation
@@ -29,41 +14,42 @@ Installation
     npm install starling
 
 
-Hello starling
---------------
+Hello starling!
+---------------
 
 ```javascript
-var starling = require('starling');
-var emulator = new starling();
-```
+const Starling = require('starling');
 
-Then browse to [http://localhost:3003](http://localhost:3003) to see the landing page which provides two means of emulation.
+let emulator = new Starling();
 
+emulator.emulate();
 
-starling and barnacles
-----------------------
-
-starling can replace [barnowl](https://www.npmjs.com/package/barnowl) as a source of visibilityEvents for [barnacles](https://www.npmjs.com/package/barnacles).  Simply bind barnacles to the instance of starling as follows:
-
-```javascript
-notifications.bind({ barnowl: emulator });
+emulator.on('raddec', function(raddec) {
+  console.log(raddec);
+});
 ```
 
 
-Options
--------
+![starling logo](https://reelyactive.github.io/starling/images/starling-bubble.png)
 
-The following options are supported when instantiating starling (those shown are the defaults):
 
-    {
-      httpPort: 3003
-    }
+What's in a name?
+-----------------
+
+As [Wikipedia explains](https://en.wikipedia.org/wiki/Starling#Mimicry), "Starlings imitate a variety of avian species and have a repertoire of about 15–20 distinct imitations."  Actually, they can mimic plenty besides other avian species.  There are some great videos of starlings mimicking telephones, classical music and more.  "Calls that are simple in frequency structure and calls that show little amplitude modulation are preferentially imitated".  That's fitting given that the wireless devices currently supported by reelyActive hardware all communicate using [Frequency-Shift Keying (FSK)](https://en.wikipedia.org/wiki/Frequency-shift_keying) which involves no amplitude modulation.
+
+Not only are starlings natural emulators, they're also occasional food for Barn Owls.  Well how about that for a coincidence.
 
 
 What's next?
 ------------
 
-This is an active work in progress.  Expect regular changes and updates, as well as improved documentation!
+__starling__ v1.0.0 was released in November 2019, superseding all earlier versions, the latest of which remains available in the [release-0.1 branch](https://github.com/reelyactive/starling/tree/release-0.1) and as [starling@0.1.0 on npm](https://www.npmjs.com/package/starling/v/0.1.0).
+
+If you're developing with barnowl check out:
+* [diyActive](https://reelyactive.github.io/) our developer page
+* our [node-style-guide](https://github.com/reelyactive/node-style-guide) for development
+* our [contact information](https://www.reelyactive.com/contact/) to get in touch if you'd like to contribute
 
 
 License
@@ -71,7 +57,7 @@ License
 
 MIT License
 
-Copyright (c) 2015 reelyActive
+Copyright (c) 2015-2019 [reelyActive](https://www.reelyactive.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -84,4 +70,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
 THE SOFTWARE.
-
