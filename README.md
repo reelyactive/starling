@@ -14,13 +14,19 @@ Installation
     npm install starling
 
 
-Hello starling
---------------
+Hello starling!
+---------------
 
 ```javascript
 const Starling = require('starling');
 
 let emulator = new Starling();
+
+emulator.emulate();
+
+emulator.on('raddec', function(raddec) {
+  console.log(raddec);
+});
 ```
 
 
