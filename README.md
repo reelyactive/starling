@@ -22,7 +22,9 @@ const Starling = require('starling');
 
 let emulator = new Starling();
 
-emulator.emulate();
+emulator.emulate({}, function(emulations) {
+  console.log(emulations);
+});
 
 emulator.on('raddec', function(raddec) {
   console.log(raddec);

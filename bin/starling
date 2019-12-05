@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+const http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser');
+const Starling = require('../lib/starling.js');
+
+
+const PORT = process.env.PORT || 3001;
+
+
+let app = express();
+app.use(bodyParser.json());
+
+let server = http.createServer(app);
+server.listen(PORT, function() {
+  console.log('starling instance is listening on port', PORT);
+});
+
+const options = { app: app };
+
+let emulator = new Starling(options);
