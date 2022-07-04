@@ -1,0 +1,68 @@
+#!/usr/bin/env node
+
+const http = require('http');
+const Starling = require('../lib/starling.js');
+
+
+const EMULATION_INTERVAL_MILLISECONDS = 1000;
+const HOSTNAME = 'localhost';
+const PORT = 3001;
+const PATH = '/impinj';
+const AGENT = new http.Agent({ keepAlive: true });
+
+
+function emulate() {
+  let now = new Date();
+  let data = [
+    {
+      "timestamp": now.toISOString(),
+      "hostname": "impinj-12-34-56",
+      "eventType": "tagInventory",
+      "tagInventoryEvent": {
+        "epc": "ftqQOAUQAnEAAsCu",
+        "epcHex": "7EDA9038051002710002C0AE",
+        "tid": "4oARcCAAFM2bWgjs",
+        "tidHex": "E2801170200014CD9B5A08EC",
+        "pc": "NAA=",
+        "antennaPort": 1,
+        "antennaName": "ANTENNA-NAME",
+        "peakRssiCdbm": -6950,
+        "frequency": 927250,
+        "transmitPowerCdbm": 3000,
+        "lastSeenTime": now.toISOString(),
+        "phaseAngle": 12.34
+      }
+    }
+  ];
+
+  forward(data);
+}
+
+
+function forward(data) {
+  let content = JSON.stringify(data);
+  let options = {
+      hostname: HOSTNAME,
+      port: PORT,
+      path: PATH,
+      agent: AGENT,
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        "Content-Length": content.length
+      }
+  };
+  let req = http.request(options, (res) => { });
+
+  req.on('error', function(error) {
+    let target = (error.address || options.hostname) + ':' +
+                 (error.port || options.port);
+    console.error('starling error:', error.code, 'on', target);
+  });
+
+  req.write(content);
+  req.end();
+}
+
+
+setInterval(emulate, EMULATION_INTERVAL_MILLISECONDS);

@@ -17,7 +17,8 @@
   },
   "main": "./lib/starling.js",
   "scripts": {
-    "start": "node bin/starling"
+    "start": "node bin/starling",
+    "impinj-iot-device-interface": "node bin/starling-impinj-iot-device-interface"
   },
   "repository": {
     "type": "git",
