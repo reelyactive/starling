@@ -19,14 +19,29 @@ function emulate() {
       "hostname": "impinj-12-34-56",
       "eventType": "tagInventory",
       "tagInventoryEvent": {
-        "epc": "ftqQOAUQAnEAAsCu",
-        "epcHex": "7EDA9038051002710002C0AE",
-        "tid": "4oARcCAAFM2bWgjs",
+        "epcHex": "3074257bf7194e4000001a85",
         "tidHex": "E2801170200014CD9B5A08EC",
         "pc": "NAA=",
         "antennaPort": 1,
         "antennaName": "ANTENNA-NAME",
         "peakRssiCdbm": -6950,
+        "frequency": 927250,
+        "transmitPowerCdbm": 3000,
+        "lastSeenTime": now.toISOString(),
+        "phaseAngle": 12.34
+      }
+    },
+    {
+      "timestamp": now.toISOString(),
+      "hostname": "impinj-12-34-56",
+      "eventType": "tagInventory",
+      "tagInventoryEvent": {
+        "epcHex": "3074257bf7194e4000001a86",
+        "tidHex": "E2801170200014CD9B5A08ED",
+        "pc": "NAA=",
+        "antennaPort": 1,
+        "antennaName": "ANTENNA-NAME",
+        "peakRssiCdbm": -5800,
         "frequency": 927250,
         "transmitPowerCdbm": 3000,
         "lastSeenTime": now.toISOString(),
